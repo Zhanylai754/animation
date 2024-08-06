@@ -1,0 +1,2894 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="/font/awesome.css" />
+	<link rel="stylesheet" type="text/css" href="data:text/css;base64,aDEsbWFpbj5zZWN0aW9uPmhlYWRlcj5oMnttYXJnaW46MCFpbXBvcnRhbnQ7dXNlci1zZWxlY3Q6bm9uZSFpbXBvcnRhbnR9KnttYXJnaW46MDtwYWRkaW5nOjA7Ym94LXNpemluZzpib3JkZXItYm94O291dGxpbmU6MH1ib2R5LGh0bWx7Zm9udC1zaXplOjIwcHghaW1wb3J0YW50O21hcmdpbjowIWltcG9ydGFudH1ib2R5e292ZXJmbG93LXg6aGlkZGVuIWltcG9ydGFudDtwYWRkaW5nOjFyZW0haW1wb3J0YW50fWgxLG1haW4+c2VjdGlvbntwYWRkaW5nOjAhaW1wb3J0YW50fWgxe2ZvbnQtZmFtaWx5OidPcGVuIFNhbnMgQ29uZGVuc2VkJyxzYW5zLXNlcmlmIWltcG9ydGFudDtmb250LXNpemU6MnJlbSFpbXBvcnRhbnQ7Zm9udC13ZWlnaHQ6MzAwIWltcG9ydGFudDt0ZXh0LWFsaWduOmNlbnRlciFpbXBvcnRhbnR9bWFpbj5zZWN0aW9ue21hcmdpbjoycmVtIDAgMCFpbXBvcnRhbnR9bWFpbj5zZWN0aW9uPmhlYWRlcnttYXJnaW46MCAwIDJyZW0haW1wb3J0YW50O3BhZGRpbmc6Y2FsYygxcmVtIC0gMXB4KSAwIWltcG9ydGFudDtib3JkZXItdG9wOjFweCBkYXNoZWQgIzk5OSFpbXBvcnRhbnQ7Ym9yZGVyLWJvdHRvbToxcHggZGFzaGVkICM5OTkhaW1wb3J0YW50fW1haW4+c2VjdGlvbj5oZWFkZXI+aDJ7Zm9udC1mYW1pbHk6J09wZW4gU2Fucycsc2Fucy1zZXJpZiFpbXBvcnRhbnQ7Zm9udC1zaXplOjEuMnJlbSFpbXBvcnRhbnQ7bGluZS1oZWlnaHQ6MS41cmVtIWltcG9ydGFudDtmb250LXdlaWdodDo0MDAhaW1wb3J0YW50fQ==" />
+
+	<title>Анимации переходов</title>
+</head>
+<!--
+===========================================================================================================
+
+	Каждый образец представлен в самостоятельном и независимом от других элементе <section>,
+	который содержит заголовочную часть <header> и заголовок <h2> с номером образца.
+
+	Общим контейнером для образца является элемент <section> с соответствующим идентификатором,
+	который необходимо использовать в каждом селекторе стиля каждого образца.
+
+	В каждом контейнере <section> уже имеется контейнер <style>, в котором необходимо написать стили
+	для соответствующего образца, можно добавлять и другие элементы разметки, если они необходимы.
+
+===========================================================================================================
+
+	Все используемые в этом тесте шрифты уже импортированы и прикреплены к странице.
+	Фамилии шрифтов, а также используемые цвета вы можете видеть под каждым образцом.
+	Для всей страницы уже выставлен базовый размер шрифта: 20px
+
+===========================================================================================================
+
+	У всех элементов уже обнулены все отступы, которые у них были по умолчанию,
+	а также выстален режим размеров:
+
+	* { margin: 0; padding: 0; box-sizing: border-box; outline: none }
+
+===========================================================================================================
+
+	Фиксации для всех черновиков:
+		Черновик [block-…]
+
+	Фиксации для первой публикации в чистовике:
+		Выполнен [block-…]
+
+	Фиксации для всех правок в чистовике по рецензии:
+		Исправлен [block-…]
+
+===========================================================================================================
+-->
+<body>
+<header>
+	<h1>Анимации переходов</h1>
+</header>
+<main>
+
+<section id="block-1">
+	<style>
+		#block-1 .para {
+			width: 75%;
+			min-width: 30rem;
+			margin: auto;
+			padding: 2rem;
+			font-family: 'PT Sans', sans-serif;
+			font-size: 0.85rem;
+			line-height: 1.5em;
+			text-align: justify;
+			background-color: #eceff1;
+			color: #455a64;
+		}
+
+			#block-1 .para > span {
+				border-bottom: 1px solid;
+				white-space: nowrap;
+				color: #00f;
+				transition: color 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-1 .para > span:hover {
+					color: #e64a19
+				}
+	</style>
+	<header>
+		<h2>Блок № 1</h2>
+	</header>
+	<p class="para">
+		Есть много вариантов <span>Lorem Ipsum</span>, но большинство из них имеет не всегда приемлемые модификации,
+		например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
+		Если вам нужен текст для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+		Другие генераторы <span>Lorem Ipsum</span> используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
+		Это делает предлагаемый здесь генератор единственным настоящим генератором.
+		Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений.
+		В результате сгенерированный <span>Lorem Ipsum</span> выглядит правдоподобно, не имеет повторяющихся абзацев или «<i>невозможных</i>» слов.
+	</p>
+</section>
+
+<section id="block-2">
+	<style>
+		#block-2 .para {
+			width: 75%;
+			min-width: 30rem;
+			margin: auto;
+			padding: 2rem;
+			font-family: 'PT Sans', sans-serif;
+			font-size: 0.85rem;
+			line-height: 1.5em;
+			text-align: justify;
+			background-color: #eceff1;
+			color: #455a64;
+		}
+
+			#block-2 .para > span {
+				padding: 0.1em 1em;
+				border-radius: 2em;
+				white-space: nowrap;
+				background-color: #455a64;
+				color: #eceff1;
+				transition: background-color 200ms linear;
+				cursor: pointer;
+			}
+
+				#block-2 .para > span:hover {
+					background-color: #e64a19
+				}
+	</style>
+	<header>
+		<h2>Блок № 2</h2>
+	</header>
+	<p class="para">
+		Есть много вариантов <span>Lorem Ipsum</span>, но большинство из них имеет не всегда приемлемые модификации,
+		например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
+		Если вам нужен текст для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+		Другие генераторы <span>Lorem Ipsum</span> используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
+		Это делает предлагаемый здесь генератор единственным настоящим генератором.
+		Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений.
+		В результате сгенерированный <span>Lorem Ipsum</span> выглядит правдоподобно, не имеет повторяющихся абзацев или «<i>невозможных</i>» слов.
+	</p>
+</section>
+
+<section id="block-3">
+	<style>
+		#block-3 .para {
+			width: 75%;
+			min-width: 30rem;
+			margin: 0 auto;
+			padding: 2rem;
+			font-family: 'PT Sans', sans-serif;
+			font-size: 0.85rem;
+			line-height: 1.5em;
+			text-align: justify;
+			background-color: #eceff1;
+			color: #455a64;
+		}
+
+			#block-3 .para > span {
+				padding: 0.1em 1em;
+				white-space: nowrap;
+				color: #eceff1;
+				background-color: #455a64;
+				transition: 100ms linear;
+				transition-property: border-radius, background-color;
+				cursor: pointer;
+			}
+
+				#block-3 .para > span:hover {
+					border-radius: 0.5em 1em;
+					background-color: #e64a19
+				}
+	</style>
+	<header>
+		<h2>Блок № 3</h2>
+	</header>
+	<p class="para">
+		Есть много вариантов <span>Lorem Ipsum</span>, но большинство из них имеет не всегда приемлемые модификации,
+		например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.
+		Если вам нужен текст для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца.
+		Другие генераторы <span>Lorem Ipsum</span> используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
+		Это делает предлагаемый здесь генератор единственным настоящим генератором.
+		Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений.
+		В результате сгенерированный <span>Lorem Ipsum</span> выглядит правдоподобно, не имеет повторяющихся абзацев или «<i>невозможных</i>» слов.
+	</p>
+</section>
+
+<section id="block-4">
+	<style>
+		#block-4 .wrapper {
+			overflow: hidden;
+			min-width: 40rem;
+			padding: 2rem;
+			background-color: #eceff1;
+		}
+
+			#block-4 .wrapper > p {
+				float: left;
+				width: calc((100% - 4rem) / 3);
+				padding: 1rem;
+				border-radius: 0.5rem;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 1.5em;
+				text-align: center;
+				box-shadow: 0 0.2rem 0.4rem -0.1rem rgba(0,0,0,0.2);
+				background-color: #fff;
+				color: #455a64;
+				transition: box-shadow 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-4 .wrapper > p + p {
+					margin-left: 2rem
+				}
+
+				#block-4 .wrapper > p:hover {
+					box-shadow: 0 0.2rem 1rem -0.2rem #455a64
+				}
+
+				#block-4 .wrapper > p:active {
+					box-shadow: 0 0.1rem 0.5rem -0.1rem #455a64
+				}
+	</style>
+	<header>
+		<h2>Блок № 4</h2>
+	</header>
+	<div class="wrapper">
+		<p>
+			Гетерогенная среда изоморфна времени.
+			Исполинская звездная спираль с поперечником в 50 кпк транспонирует конструктивный рейтинг.
+			Большая часть территории, так как не наследует древние поднятия, оформляет шток.
+			Присоединение органического вещества, несмотря на внешние воздействия, обычно отталкивает бесплатный дискурс.
+		</p>
+		<p>
+			Площадь стабилизирует стремящийся социализм.
+			Политические учения Гоббса дегустирует праздник франко-говорящего культурного сообщества.
+			Рецептивная эстетика наблюдаема. Сервитут вращает тензиометр. Кластерное вибрато, в том числе, велико.
+			Воздействие на потребителя безусловно поглощает тяжелосуглинистый момент, хотя в официозе принято обратное.
+		</p>
+		<p>
+			Кварк поднимает гироскопический стабилизатоор. Глиссандирующая ритмоформула определяет гироскоп.
+			Иными словами, изостазия пространственно развивает неизменный художественный идеал.
+			Алеаторика, согласно традиционным представлениям, осмысленно экономит астероид.
+			Математическая статистика иллюстрирует экспериментальный политический процесс.
+		</p>
+	</div>
+</section>
+
+<section id="block-5">
+	<style>
+		#block-5 .wrapper {
+			overflow: hidden;
+			min-width: 40rem;
+			padding: 2rem;
+			background-color: #eceff1;
+		}
+
+			#block-5 .wrapper > p {
+				float: left;
+				width: calc((100% - 4rem) / 3);
+				padding: 1rem;
+				border: 0.1rem solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 1.5em;
+				text-align: center;
+				background-color: #fff;
+				color: #455a64;
+				transition: 150ms linear;
+				transition-property: border-color, box-shadow;
+				cursor: pointer;
+			}
+
+				#block-5 .wrapper > p + p {
+					margin-left: 2rem
+				}
+
+				#block-5 .wrapper > p:hover {
+					border-color: #455a64;
+					box-shadow: 0 0.2rem 1rem -0.2rem #455a64
+				}
+
+				#block-5 .wrapper > p:active {
+					box-shadow: 0 0.1rem 0.5rem -0.1rem #455a64
+				}
+	</style>
+	<header>
+		<h2>Блок № 5</h2>
+	</header>
+	<div class="wrapper">
+		<p>
+			Надстройка ударяет сегмент рынка. Согласно последним исследованиям, дифференциальное исчисление в принципе связывает кризис легитимности.
+			Взаимодействие корпорации и клиента, очевидно, синхронизирует гранулометрический анализ, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике.
+		</p>
+		<p>
+			Храмовый комплекс, посвященный дилмунскому богу Енки, философски аннигилирует триплетный лирический субъект.
+			Флегматик, как следует из вышесказанного, вполне вероятен. Собственный кинетический момент, на первый взгляд, экранирует анапест в полном соответствии с законом Дарси.
+			Следует отметить, что вулканизм неизменяем.
+		</p>
+		<p>
+			Гений начинает антимонопольный атом. Синтаксис искусства абстрактен. Уравнение в частных производных последовательно притягивает продукт реакции.
+			Размещение отражает фирменный стиль. Уравнение Эйлера, не учитывая количества слогов, стоящих между ударениями, последовательно. Фишка готично нейтрализует барионный фотон.
+		</p>
+	</div>
+</section>
+
+<section id="block-6">
+	<style>
+		#block-6 .wrapper {
+			overflow: hidden;
+			min-width: 40rem;
+			padding: 2rem;
+			background-color: #eceff1;
+		}
+
+			#block-6 .wrapper > p {
+				float: left;
+				width: calc((100% - 4rem) / 3);
+				padding: 1rem;
+				border: 0.1rem solid transparent;
+				outline: 0.1rem solid transparent;
+				outline-offset: 1rem;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 1.5em;
+				text-align: center;
+				background-color: #fff;
+				color: #455a64;
+				transition: 150ms linear;
+				transition-property: box-shadow, outline-color, outline-offset;
+				cursor: pointer;
+			}
+
+				#block-6 .wrapper > p + p {
+					margin-left: 2rem
+				}
+
+				#block-6 .wrapper > p:hover {
+					box-shadow: 0 0.2rem 1rem -0.2rem #455a64;
+					outline-color: #455a64;
+					outline-offset: -0.1rem;
+				}
+
+				#block-6 .wrapper > p:active {
+					box-shadow: 0 0.1rem 0.5rem -0.1rem #455a64
+				}
+	</style>
+	<header>
+		<h2>Блок № 6</h2>
+	</header>
+	<div class="wrapper">
+		<p>
+			Надстройка ударяет сегмент рынка. Согласно последним исследованиям, дифференциальное исчисление в принципе связывает кризис легитимности.
+			Взаимодействие корпорации и клиента, очевидно, синхронизирует гранулометрический анализ, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике.
+		</p>
+		<p>
+			Храмовый комплекс, посвященный дилмунскому богу Енки, философски аннигилирует триплетный лирический субъект.
+			Флегматик, как следует из вышесказанного, вполне вероятен. Собственный кинетический момент, на первый взгляд, экранирует анапест в полном соответствии с законом Дарси.
+			Следует отметить, что вулканизм неизменяем.
+		</p>
+		<p>
+			Гений начинает антимонопольный атом. Синтаксис искусства абстрактен. Уравнение в частных производных последовательно притягивает продукт реакции.
+			Размещение отражает фирменный стиль. Уравнение Эйлера, не учитывая количества слогов, стоящих между ударениями, последовательно. Фишка готично нейтрализует барионный фотон.
+		</p>
+	</div>
+</section>
+
+<section id="block-7">
+	<style>
+		#block-7 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #ffebee;
+		}
+
+		#block-7 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-7 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border: 0.1rem solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #ffcdd2;
+				color: #d32f2f;
+				transition: border-color 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-7 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-7 .menu > li:hover {
+					border-color: #d32f2f
+				}
+	</style>
+	<header>
+		<h2>Блок № 7</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-8">
+	<style>
+		#block-8 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #ffebee;
+		}
+
+		#block-8 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-8 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border: 0.2rem double #ffcdd2;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.1rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #ffcdd2;
+				color: #d32f2f;
+				transition: background-color 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-8 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-8 .menu > li:hover {
+					background-color: transparent
+				}
+	</style>
+	<header>
+		<h2>Блок № 8</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-9">
+	<style>
+		#block-9 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fce4ec;
+		}
+
+		#block-9 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-9 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				outline: 0 solid #c2185b;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #c2185b;
+				color: #fff;
+				cursor: pointer;
+			}
+
+				#block-9 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-9 .menu > li:hover {
+					transition: outline 300ms linear;
+					outline: 1rem solid transparent
+				}
+	</style>
+	<header>
+		<h2>Блок № 9</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-10">
+	<style>
+		#block-10 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fce4ec;
+		}
+
+		#block-10 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-10 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				outline: 1rem solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #c2185b;
+				color: #fff;
+				cursor: pointer;
+			}
+
+				#block-10 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-10 .menu > li:hover {
+					transition: outline 300ms linear;
+					outline: 0 solid #c2185b
+				}
+	</style>
+	<header>
+		<h2>Блок № 10</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-11">
+	<style>
+		#block-11 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fce4ec;
+		}
+
+		#block-11 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-11 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				outline: 0 solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #c2185b;
+				color: #fff;
+				transition: 150ms linear;
+				transition-property: outline, outline-offset;
+				cursor: pointer;
+			}
+
+				#block-11 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-11 .menu > li:hover {
+					outline: 0.2rem solid #c2185b;
+					outline-offset: 0.2rem
+				}
+	</style>
+	<header>
+		<h2>Блок № 11</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-12">
+	<style>
+		#block-12 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #f3e5f5;
+		}
+
+		#block-12 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-12 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border-radius: 2.5rem;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #7b1fa2;
+				color: #fff;
+				transition: border-radius 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-12 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-12 .menu > li:hover {
+					border-radius: 0
+				}
+	</style>
+	<header>
+		<h2>Блок № 12</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-13">
+	<style>
+		#block-13 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #ede7f6;
+		}
+
+		#block-13 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-13 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				height: 2.5rem;
+				border-top: 0.2rem solid transparent;
+				border-bottom: 0 solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.1rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #d1c4e9;
+				color: #512da8;
+				transition: border-bottom 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-13 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-13 .menu > li:hover {
+					border-bottom: 0.2rem solid #512da8
+				}
+	</style>
+	<header>
+		<h2>Блок № 13</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-14">
+	<style>
+		#block-14 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #ede7f6;
+		}
+
+		#block-14 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-14 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border-left: 0 solid transparent;
+				border-right: 0 solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #d1c4e9;
+				color: #512da8;
+				transition: 150ms linear;
+				transition-property: border-left, border-right;
+				cursor: pointer;
+			}
+
+				#block-14 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-14 .menu > li:hover {
+					border-left: 0.2rem solid #512da8;
+					border-right: 0.2rem solid #512da8
+				}
+	</style>
+	<header>
+		<h2>Блок № 14</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-15">
+	<style>
+		#block-15 .navigator {
+			overflow: hidden;
+			min-width: 34rem;
+			padding: 2rem;
+			background-color: #e8eaf6;
+		}
+
+		#block-15 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-15 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #c5cae9;
+				color: #1a237e;
+				transition: box-shadow 100ms linear;
+				cursor: pointer;
+			}
+
+				#block-15 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-15 .menu > li:hover {
+					box-shadow: 0 0.5em 0.5em -0.5em #1a237e
+				}
+
+				#block-15 .menu > li:active {
+					box-shadow: none
+				}
+	</style>
+	<header>
+		<h2>Блок № 15</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-16">
+	<style>
+		#block-16 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #e8eaf6;
+		}
+
+		#block-16 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-16 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				outline: 0 solid transparent;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #c5cae9;
+				color: #1a237e;
+				transition: 100ms linear;
+				transition-property: font-size, box-shadow, outline;
+				cursor: pointer;
+			}
+
+				#block-16 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-16 .menu > li:hover {
+					font-size: 1em;
+					box-shadow: 0 1rem 1.5rem -1rem #1a237e;
+					outline: 0.2rem solid #c5cae9;
+				}
+
+				#block-16 .menu > li:active {
+					font-size: 0.85rem;
+					box-shadow: 0 0.3rem 0.75rem -0.3rem #1a237e;
+					outline: 0 solid transparent;
+				}
+	</style>
+	<header>
+		<h2>Блок № 16</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-17">
+	<style>
+		#block-17 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #3949ab;
+		}
+
+		#block-17 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-17 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				text-transform: uppercase;
+				white-space: nowrap;
+				background-color: #3949ab;
+				color: #e8eaf6;
+				transition: box-shadow 150ms linear;
+				cursor: pointer;
+			}
+
+				#block-17 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-17 .menu > li:hover {
+					box-shadow: 0 1rem 1.5rem -1rem #000
+				}
+
+				#block-17 .menu > li:active {
+					box-shadow: none
+				}
+	</style>
+	<header>
+		<h2>Блок № 17</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-18">
+	<style>
+		#block-18 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #0288d1;
+		}
+
+		#block-18 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-18 .menu > li {
+				float: left;
+				width: 20%;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #e1f5fe;
+				cursor: pointer;
+			}
+
+				#block-18 .menu > li:before,
+				#block-18 .menu > li:after {
+					content: '';
+					display: block;
+					height: 0.1rem;
+					width: 30%;
+					margin: auto;
+					background-color: #e1f5fe;
+					transition: width 200ms linear;
+				}
+
+				#block-18 .menu > li:hover:before,
+				#block-18 .menu > li:hover:after {
+					width: 100%
+				}
+	</style>
+	<header>
+		<h2>Блок № 18</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-19">
+	<style>
+		#block-19 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #0288d1;
+		}
+
+		#block-19 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-19 .menu > li {
+				float: left;
+				width: 20%;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #e1f5fe;
+				cursor: pointer;
+			}
+
+				#block-19 .menu > li:before,
+				#block-19 .menu > li:after {
+					content: '';
+					display: block;
+					height: 0.1rem;
+					width: 0;
+					margin: 0;
+					background-color: transparent;
+					transition: 200ms linear;
+					transition-property: width, background-color;
+				}
+
+				#block-19 .menu > li:after {
+					margin-left: auto
+				}
+
+				#block-19 .menu > li:hover:before,
+				#block-19 .menu > li:hover:after {
+					width: 75%;
+					background-color: #e1f5fe;
+				}
+	</style>
+	<header>
+		<h2>Блок № 19</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-20">
+	<style>
+		#block-20 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #0288d1;
+		}
+
+		#block-20 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-20 .menu > li {
+				overflow: hidden;
+				float: left;
+				width: 20%;
+				height: 2.5rem;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #e1f5fe;
+				cursor: pointer;
+			}
+
+				#block-20 .menu > li:before,
+				#block-20 .menu > li:after {
+					content: '';
+					display: block;
+					width: 0.1rem;
+					height: 0.1rem;
+					background-color: transparent;
+					transition: 200ms linear;
+				}
+
+				#block-20 .menu > li:before {
+					float: left
+				}
+
+				#block-20 .menu > li:after {
+					float: right;
+					margin-top: 2.5rem;
+				}
+
+				#block-20 .menu > li:hover:before,
+				#block-20 .menu > li:hover:after {
+					margin-top: 0;
+					height: 100%;
+					background-color: #e1f5fe;
+				}
+	</style>
+	<header>
+		<h2>Блок № 20</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-21">
+	<style>
+		#block-21 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #00695c;
+		}
+
+		#block-21 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-21 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				height: 2.5rem;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.4rem;
+				text-align: center;
+				text-transform: uppercase;
+				white-space: nowrap;
+				color: #e0f2f1;
+				cursor: pointer;
+			}
+
+				#block-21 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-21 .menu > li > span {
+					display: block;
+					height: 0.1rem;
+					border-bottom: 0.1rem solid;
+					border-left: 0.1rem solid;
+					transition: height 200ms linear;
+				}
+
+				#block-21 .menu > li:hover > span {
+					height: 100%
+				}
+	</style>
+	<header>
+		<h2>Блок № 21</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li><span>Home</span></li>
+			<li><span>Blog</span></li>
+			<li><span>Portfolio</span></li>
+			<li><span>About Us</span></li>
+			<li><span>Contacts</span></li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-22">
+	<style>
+		#block-22 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #e0f2f1;
+		}
+
+		#block-22 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-22 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 3rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #b2dfdb;
+				color: #00695c;
+				cursor: pointer;
+				transition: box-shadow 150ms linear;
+			}
+
+				#block-22 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-22 .menu > li:before {
+					content: '';
+					display: block;
+					margin-bottom: 0;
+					height: 0;
+					width: 0;
+					background-image: linear-gradient(135deg, #e0f2f1 calc(50% - 1px), #b0bec5 50%);
+					transition: all 150ms linear;
+				}
+
+				#block-22 .menu > li:hover {
+					box-shadow: 0 0.5rem 0.5rem -0.5rem rgba(0,0,0,0.5)
+				}
+
+				#block-22 .menu > li:active {
+					box-shadow: 0 0 0 0 transparent
+				}
+
+				#block-22 .menu > li:hover:before {
+					height: 1rem;
+					width: 1rem;
+					margin-bottom: -1rem;
+				}
+	</style>
+	<header>
+		<h2>Блок № 22</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-23">
+	<style>
+		#block-23 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #c5e1a5;
+		}
+
+		#block-23 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-23 .menu > li,
+			#block-23 .menu > li:before {
+				float: left;
+				height: 2.5rem;
+			}
+
+			#block-23 .menu > li {
+				overflow: hidden;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				text-transform: capitalize;
+				white-space: nowrap;
+				background-color: #689f38;
+				color: #f1f8e9;
+				cursor: pointer;
+			}
+
+				#block-23 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-23 .menu > li:before {
+					display: block;
+					width: 100%;
+					margin-left: -100%;
+					background-color: #f1f8e9;
+					color: #689f38;
+					transition: margin-left 200ms linear;
+				}
+
+				#block-23 .menu > li:hover:before {
+					margin-left: 0
+				}
+
+				#block-23 .menu > li.home:before {
+					content: 'home'
+				}
+
+				#block-23 .menu > li.blog:before {
+					content: 'blog'
+				}
+
+				#block-23 .menu > li.portfolio:before {
+					content: 'portfolio'
+				}
+
+				#block-23 .menu > li.about:before {
+					content: 'about us'
+				}
+
+				#block-23 .menu > li.contacts:before {
+					content: 'contacts'
+				}
+	</style>
+	<header>
+		<h2>Блок № 23</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="home">Home</li>
+			<li class="blog">Blog</li>
+			<li class="portfolio">Portfolio</li>
+			<li class="about">About Us</li>
+			<li class="contacts">Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-24">
+	<style>
+		#block-24 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #c5e1a5;
+		}
+
+		#block-24 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-24 .menu > li,
+			#block-24 .menu > li:before {
+				height: 2.5rem
+			}
+
+			#block-24 .menu > li {
+				overflow: hidden;
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				text-transform: capitalize;
+				white-space: nowrap;
+				background-color: #689f38;
+				color: #f1f8e9;
+				cursor: pointer;
+				transition: color 200ms linear;
+			}
+
+				#block-24 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-24 .menu > li:before {
+					display: block;
+					float: right;
+					width: 100%;
+					margin-right: -100%;
+					background-color: #f1f8e9;
+					color: #689f38;
+					transition: margin-right 200ms linear;
+				}
+
+				#block-24 .menu > li:hover {
+					color: transparent
+				}
+
+					#block-24 .menu > li:hover:before {
+						margin-right: 0
+					}
+
+				#block-24 .menu > li.home:before {
+					content: 'home'
+				}
+
+				#block-24 .menu > li.blog:before {
+					content: 'blog'
+				}
+
+				#block-24 .menu > li.portfolio:before {
+					content: 'portfolio'
+				}
+
+				#block-24 .menu > li.about:before {
+					content: 'about us'
+				}
+
+				#block-24 .menu > li.contacts:before {
+					content: 'contacts'
+				}
+	</style>
+	<header>
+		<h2>Блок № 24</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="home">Home</li>
+			<li class="blog">Blog</li>
+			<li class="portfolio">Portfolio</li>
+			<li class="about">About Us</li>
+			<li class="contacts">Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-25">
+	<style>
+		#block-25 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #c5e1a5;
+		}
+
+		#block-25 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-25 .menu > li,
+			#block-25 .menu > li:before {
+				height: 2.5rem
+			}
+
+			#block-25 .menu > li {
+				overflow: hidden;
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				text-transform: capitalize;
+				white-space: nowrap;
+				background-color: #689f38;
+				color: #f1f8e9;
+				cursor: pointer;
+			}
+
+				#block-25 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-25 .menu > li:before {
+					display: block;
+					width: 100%;
+					margin-top: -2.5rem;
+					background-color: #f1f8e9;
+					color: #689f38;
+					transition: margin-top 200ms linear;
+				}
+
+				#block-25 .menu > li:hover:before {
+					margin-top: 0
+				}
+
+				#block-25 .menu > li.home:before {
+					content: 'home'
+				}
+
+				#block-25 .menu > li.blog:before {
+					content: 'blog'
+				}
+
+				#block-25 .menu > li.portfolio:before {
+					content: 'portfolio'
+				}
+
+				#block-25 .menu > li.about:before {
+					content: 'about us'
+				}
+
+				#block-25 .menu > li.contacts:before {
+					content: 'contacts'
+				}
+	</style>
+	<header>
+		<h2>Блок № 25</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="home">Home</li>
+			<li class="blog">Blog</li>
+			<li class="portfolio">Portfolio</li>
+			<li class="about">About Us</li>
+			<li class="contacts">Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-26">
+	<style>
+		#block-26 .navigator {
+			overflow: hidden;
+			min-width: 48rem;
+			padding: 2rem;
+			background-color: #f9fbe7;
+		}
+
+		#block-26 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-26 .menu > li {
+				overflow: hidden;
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #f0f4c3;
+				color: #827717;
+				cursor: pointer;
+				transition: box-shadow 150ms linear;
+			}
+
+				#block-26 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-26 .menu > li:before {
+					display: block;
+					float: left;
+					width: 2.5rem;
+					aspect-ratio: 1 / 1;
+					margin-left: -2.3rem;
+					line-height: 2.5rem;
+					background-color: #827717;
+					color: #f9fbe7;
+					transition: margin-left 150ms linear;
+				}
+
+				#block-26 .menu > li:hover {
+					box-shadow: 0 0.5rem 0.5em -0.5rem #827717
+				}
+
+					#block-26 .menu > li:hover:before {
+						margin-left: 0
+					}
+
+				#block-26 .menu > li:active {
+					box-shadow: none
+				}
+	</style>
+	<header>
+		<h2>Блок № 26</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="fal fa-home">Home</li>
+			<li class="fal fa-pen">Blog</li>
+			<li class="fal fa-images">Portfolio</li>
+			<li class="fal fa-star">About Us</li>
+			<li class="fal fa-mail-bulk">Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-27">
+	<style>
+		#block-27 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #f9fbe7;
+		}
+
+		#block-27 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-27 .menu > li,
+			#block-27 .menu > li:before {
+				height: 2.5rem
+			}
+
+			#block-27 .menu > li {
+				overflow: hidden;
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.5rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #827717;
+				color: #f9fbe7;
+				cursor: pointer;
+			}
+
+				#block-27 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-27 .menu > li:before {
+					display: block;
+					height: 2.5rem;
+					margin-top: -2.5rem;
+					font-size: 1rem;
+					line-height: 2.5rem;
+					transition: margin-top 200ms linear;
+				}
+
+				#block-27 .menu > li:hover:before {
+					margin-top: 0
+				}
+	</style>
+	<header>
+		<h2>Блок № 27</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="fal fa-home">Home</li>
+			<li class="fal fa-pen">Blog</li>
+			<li class="fal fa-images">Portfolio</li>
+			<li class="fal fa-star">About Us</li>
+			<li class="fal fa-mail-bulk">Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-28">
+	<style>
+		#block-28 .navigator {
+			min-width: 40.5em;
+			padding: 2rem;
+			background-color: #fffde7;
+		}
+
+		#block-28 .menu {
+			overflow: hidden;
+			width: 36.5rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-28 .menu > li {
+				float: left;
+				width: 6.5rem;
+				aspect-ratio: 1 / 1;
+				border: 0.25rem solid #f9a825;
+				border-radius: 100%;
+				font-family: 'Font Awesome';
+				font-size: 2rem;
+				font-weight: 300;
+				line-height: 6rem;
+				text-align: center;
+				background-color: #f9a825;
+				color: #fffde7;
+				cursor: pointer;
+				transition: box-shadow 150ms linear;
+			}
+
+				#block-28 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-28 .menu > li:hover {
+					box-shadow: inset 0 0 0 0.25rem #fffde7
+				}
+	</style>
+	<header>
+		<h2>Блок № 28</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>&#61461;</li>
+			<li>&#62212;</li>
+			<li>&#62210;</li>
+			<li>&#61445;</li>
+			<li>&#63092;</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-29">
+	<style>
+		#block-29 .navigator {
+			min-width: 40.5em;
+			padding: 2rem;
+			background-color: #f9a825;
+		}
+
+		#block-29 .menu {
+			overflow: hidden;
+			width: 36.5rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-29 .menu > li,
+			#block-29 .menu > li:before {
+				width: 6.5rem;
+				aspect-ratio: 1 / 1;
+				line-height: 6.5rem;
+				border-radius: 100%;
+			}
+
+			#block-29 .menu > li {
+				overflow: hidden;
+				float: left;
+				font-family: 'Font Awesome';
+				font-size: 2rem;
+				font-weight: 300;
+				text-align: center;
+				white-space: nowrap;
+				box-shadow: inset 0 0 0 0.25rem #fffde7;
+				background-color: #f9a825;
+				color: #fffde7;
+				cursor: pointer;
+				transition: color 150ms linear;
+			}
+
+				#block-29 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-29 .menu > li:before {
+					display: block;
+					float: right;
+					margin-right: -6.5rem;
+					color: transparent;
+					transition: all 100ms linear;
+				}
+
+				#block-29 .menu > li:hover {
+					color: transparent
+				}
+
+					#block-29 .menu > li:hover:before {
+						margin-right: 0;
+						margin-left: -6.5rem;
+						background-color: #fffde7;
+						color: #f9a825;
+					}
+	</style>
+	<header>
+		<h2>Блок № 29</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="fal fa-home">&#61461;</li>
+			<li class="fal fa-pen">&#62212;</li>
+			<li class="fal fa-images">&#62210;</li>
+			<li class="fal fa-star">&#61445;</li>
+			<li class="fal fa-mail-bulk">&#63092;</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-30">
+	<style>
+		#block-30 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fff3e0;
+		}
+
+		#block-30 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-30 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border: 0.1rem solid #f57f17;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #f57f17;
+				background-image: linear-gradient(to right, #fff3e0 50%, transparent 0);
+				background-size: 200% 100%;
+				background-position-x: 100%;
+				background-repeat: no-repeat;
+				color: #fff3e0;
+				transition: 200ms linear;
+				transition-property: color, background-position-x;
+				cursor: pointer;
+			}
+
+				#block-30 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-30 .menu > li:hover {
+					color: #f57f17;
+					background-position-x: 0
+				}
+	</style>
+	<header>
+		<h2>Блок № 30</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-31">
+	<style>
+		#block-31 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fff3e0;
+		}
+
+		#block-31 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-31 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border: 0.1rem solid #f57f17;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #f57f17;
+				background-image: linear-gradient(to right, transparent 50%, #fff3e0 0);
+				background-size: 200% 100%;
+				background-position-x: 0;
+				background-repeat: no-repeat;
+				color: #fff3e0;
+				transition: 200ms linear;
+				transition-property: color, background-position-x;
+				cursor: pointer;
+			}
+
+				#block-31 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-31 .menu > li:hover {
+					color: #f57f17;
+					background-position-x: 100%
+				}
+	</style>
+	<header>
+		<h2>Блок № 31</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-32">
+	<style>
+		#block-32 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fff3e0;
+		}
+
+		#block-32 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-32 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border: 0.1rem solid #f57f17;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #f57f17;
+				background-image: linear-gradient(#fff3e0 50%, transparent 0);
+				background-size: 100% 200%;
+				background-position-y: 100%;
+				background-repeat: no-repeat;
+				color: #fff3e0;
+				transition: 200ms linear;
+				transition-property: color, background-position-y;
+				cursor: pointer;
+			}
+
+				#block-32 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-32 .menu > li:hover {
+					color: #f57f17;
+					background-position-y: 0
+				}
+	</style>
+	<header>
+		<h2>Блок № 32</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-33">
+	<style>
+		#block-33 .navigator {
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #fff3e0;
+		}
+
+		#block-33 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-33 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				border: 0.1rem solid #f57f17;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.3rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #f57f17;
+				background-image: linear-gradient(transparent 50%, #fff3e0 0);
+				background-size: 100% 200%;
+				background-position-y: 0;
+				background-repeat: no-repeat;
+				color: #fff3e0;
+				transition: 200ms linear;
+				transition-property: color, background-position-y;
+				cursor: pointer;
+			}
+
+				#block-33 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-33 .menu > li:hover {
+					color: #f57f17;
+					background-position-y: 100%
+				}
+	</style>
+	<header>
+		<h2>Блок № 33</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li>Home</li>
+			<li>Blog</li>
+			<li>Portfolio</li>
+			<li>About Us</li>
+			<li>Contacts</li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-34">
+	<style>
+		#block-34 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #4e342e;
+		}
+
+		#block-34 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-34 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				padding: 0.2rem;
+				background-image: linear-gradient(to right, #efebe9 0 100%);
+				background-size: 3rem 100%;
+				background-position-x: -4rem;
+				background-repeat: no-repeat;
+				cursor: pointer;
+			}
+
+				#block-34 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-34 .menu > li > span {
+					display: block;
+					font-family: 'PT Sans', sans-serif;
+					font-size: 0.85rem;
+					line-height: 2.6rem;
+					text-align: center;
+					white-space: nowrap;
+					background-color: #4e342e;
+					color: #efebe9;
+					transition: box-shadow 150ms linear;
+				}
+
+				#block-34 .menu > li:hover {
+					transition: background-position-x 500ms linear;
+					background-position-x: calc(100% + 4rem);
+				}
+
+					#block-34 .menu > li:hover > span {
+						box-shadow: 0 1rem 1rem -1rem #000
+					}
+
+				#block-34 .menu > li:active > span {
+					box-shadow: none
+				}
+	</style>
+	<header>
+		<h2>Блок № 34</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li><span>Home</span></li>
+			<li><span>Blog</span></li>
+			<li><span>Portfolio</span></li>
+			<li><span>About Us</span></li>
+			<li><span>Contacts</span></li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-35">
+	<style>
+		#block-35 .navigator {
+			overflow: hidden;
+			min-width: 35rem;
+			padding: 2rem;
+			background-color: #4e342e;
+		}
+
+		#block-35 .menu {
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+		}
+
+			#block-35 .menu > li {
+				float: left;
+				width: calc((100% - 4rem) / 5);
+				padding: 0.2rem;
+				background-image: linear-gradient(to right, #efebe9 0 100%);
+				background-size: 100% 3rem;
+				background-position-y: -3rem;
+				background-repeat: no-repeat;
+				cursor: pointer;
+			}
+
+				#block-35 .menu > li + li {
+					margin-left: 1rem
+				}
+
+				#block-35 .menu > li > span {
+					display: block;
+					font-family: 'PT Sans', sans-serif;
+					font-size: 0.85rem;
+					line-height: 2.6rem;
+					text-align: center;
+					white-space: nowrap;
+					background-color: #4e342e;
+					color: #efebe9;
+					transition: box-shadow 150ms linear;
+				}
+
+				#block-35 .menu > li:hover {
+					transition: background-position-y 400ms linear;
+					background-position-y: 3rem;
+				}
+
+					#block-35 .menu > li:hover > span {
+						box-shadow: 0 1rem 1rem -1rem #000
+					}
+
+				#block-35 .menu > li:active > span {
+					box-shadow: none
+				}
+	</style>
+	<header>
+		<h2>Блок № 35</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li><span>Home</span></li>
+			<li><span>Blog</span></li>
+			<li><span>Portfolio</span></li>
+			<li><span>About Us</span></li>
+			<li><span>Contacts</span></li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-36">
+	<style>
+		#block-36 .wrapper {
+			padding: 5rem;
+			min-width: 20rem;
+			background-color: #4e342e;
+			text-align: center;
+		}
+
+		#block-36 .progress {
+			height: 1.5rem;
+			margin: auto;
+			border: 0.1rem solid #efebe9;
+			border-radius: 1rem;
+			box-shadow: inset 0 0 .5rem 0.05rem black;
+			background-color: #f57f17;
+			background-image: repeating-linear-gradient(135deg, transparent 0 0.2rem, rgba(255,255,255,0.5) 0.2rem 0.4rem);
+			background-size: 1.7rem 1.7rem;
+			background-position-y: 1000%;
+			transition: background-position-y 1s linear;
+			cursor: pointer;
+		}
+
+			#block-36 .progress:hover {
+				background-position-y: 0
+			}
+	</style>
+	<header>
+		<h2>Блок № 36</h2>
+	</header>
+	<div class="wrapper"><hr class="progress" /></div>
+</section>
+
+<section id="block-37">
+	<style>
+		#block-37 .navigator {
+			min-width: 40rem;
+			padding: 3rem;
+			background-color: #37474f;
+		}
+
+		#block-37 .menu {
+			overflow: hidden;
+			max-width: 60rem;
+			margin: auto;
+			list-style: none inside;
+			border-top-left-radius: 0.5rem;
+			border-top-right-radius: 0.5rem;
+			box-shadow: 0 0.5rem 1rem -0.5rem black;
+			background-color: #78909c;
+		}
+
+			#block-37 .menu > li {
+				overflow: hidden;
+				float: left;
+				width: 20%;
+				height: 2.8rem;
+				font-family: 'PT Sans', sans-serif;
+				font-size: 0.85rem;
+				line-height: 2.8rem;
+				text-align: center;
+				white-space: nowrap;
+				background-color: #546e7a;
+				color: #fff;
+				cursor: pointer;
+				transition: box-shadow 300ms linear;
+			}
+
+				#block-37 .menu > li.line {
+					clear: both;
+					width: 20%;
+					height: 0.2rem;
+					background-color: #78909c;
+					transition: 300ms linear;
+					transition-property: margin-left, background-color
+				}
+
+				#block-37 .menu > li:hover {
+					box-shadow: inset 0 -0.5rem 1rem -0.5rem rgba(0,0,0,0.5)
+				}
+
+				#block-37 .menu > li.red:hover ~ li.line {
+					margin-left: 0;
+					background-color: #f44336
+				}
+
+				#block-37 .menu > li.violet:hover ~ li.line {
+					margin-left: 20%;
+					background-color: #9c27b0
+				}
+
+				#block-37 .menu > li.blue:hover ~ li.line {
+					margin-left: 40%;
+					background-color: #29b6f6
+				}
+
+				#block-37 .menu > li.green:hover ~ li.line {
+					margin-left: 60%;
+					background-color: #00e676
+				}
+
+				#block-37 .menu > li.yellow:hover ~ li.line {
+					margin-left: 80%;
+					background-color: #ffc107
+				}
+	</style>
+	<header>
+		<h2>Блок № 37</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="red">Home</li>
+			<li class="violet">Blog</li>
+			<li class="blue">Portfolio</li>
+			<li class="green">About Us</li>
+			<li class="yellow">Contacts</li>
+			<li class="line"></li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-38">
+	<style>
+		#block-38 .navigator {
+			min-width: 23rem;
+			padding: 3rem;
+			background-color: #455a64;
+		}
+
+		#block-38 .menu {
+			display: table;
+			list-style: none inside;
+		}
+
+			#block-38 .menu > li,
+			#block-38 .menu > li:before {
+				display: block;
+				width: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				color: #fff;
+			}
+
+			#block-38 .menu > li {
+				overflow: hidden;
+				float: left;
+				font-size: 1rem;
+				border-radius: 50%;
+				background-color: #eceff1;
+				cursor: pointer;
+				transition: all 0.2s linear;
+			}
+
+				#block-38 .menu > li:not(.fa-link) {
+					margin-left: -3rem;
+					opacity: 0
+				}
+
+				#block-38 .menu > li.fa-link:before {
+					color: #37474f
+				}
+
+			#block-38 .menu:hover > li.fa-link {
+				opacity: 0.5;
+				cursor: default
+			}
+
+			#block-38 .menu:hover > li:not(.fa-link) {
+				margin-left: 0.5rem;
+				opacity: 1
+			}
+
+				#block-38 .menu:hover > li:not(.fa-link):hover {
+					font-size: 1.5rem;
+				}
+
+				#block-38 .menu:hover > li:not(.fa-link):active {
+					filter: grayscale(1)
+				}
+	</style>
+	<header>
+		<h2>Блок № 38</h2>
+	</header>
+	<nav class="navigator">
+		<ul class="menu">
+			<li class="fas fa-link"></li>
+			<li class="fab fa-github" style="background-image: linear-gradient(45deg, #ffcc80,#ffca28)"></li>
+			<li class="fab fa-twitter" style="background-image: linear-gradient(45deg, #81d4fa, #42a5f5)"></li>
+			<li class="fab fa-codepen" style="background-image: linear-gradient(45deg, #b39ddb, #ab47bc)"></li>
+			<li class="fab fa-linkedin-in" style="background-image: linear-gradient(45deg, #f48fb1, #ef5350)"></li>
+		</ul>
+	</nav>
+</section>
+
+<section id="block-39">
+	<style>
+		#block-39 .wrapper {
+			min-width: 40rem;
+			padding: 5rem;
+			background-color: #455a64;
+		}
+
+		#block-39 .frame,
+		#block-39 .panorama {
+			overflow: hidden;
+			border: 1rem solid
+		}
+
+		#block-39 .frame {
+			border-color: #fafafa #f5f5f5 #e0e0e0 #f5f5f5;
+			box-shadow: 0 0.5rem 3rem -1rem black;
+		}
+
+		#block-39 .panorama {
+			border-color: #e0e0e0 #eee #fafafa #eee
+		}
+
+		#block-39 .image {
+			display: block;
+			width: 100%;
+			height: 20rem;
+			object-fit: cover;
+			object-position: 0 center;
+			transition: object-position 10s linear;
+		}
+
+			#block-39 .image:hover {
+				object-position: 100% center;
+				cursor: ew-resize
+			}
+	</style>
+	<header>
+		<h2>Блок № 39</h2>
+	</header>
+	<div class="wrapper">
+		<div class="frame">
+			<figure class="panorama"><img class="image" src="img/panorama.jpg" /></figure>
+		</div>
+	</div>
+</section>
+
+<section id="block-40">
+	<style>
+		#block-40 .wrapper {
+			min-width: 40rem;
+			padding: 5rem;
+			background-color: #fafafa;
+		}
+
+		#block-40 .frame {
+			overflow: hidden;
+			border: 1rem solid;
+		}
+
+			#block-40 .frame.outset {
+				border-color: #fafafa #f5f5f5 #e0e0e0 #f5f5f5;
+				box-shadow: 0 0.5rem 3rem -1rem black;
+			}
+
+			#block-40 .frame.inset {
+				border-color: #e0e0e0 #eee #fafafa #eee
+			}
+
+		#block-40 .pano-wrapper {
+			float: left;
+			overflow: hidden;
+			width: 100%;
+		}
+
+			#block-40 .pano-wrapper.new {
+				box-shadow: inset 0 0.5rem 3rem -1rem black
+			}
+
+			#block-40 .pano-wrapper.old {
+				margin-top: -50%;
+				transition: margin-left 5s linear
+			}
+
+				#block-40 .pano-wrapper.old .pano {
+					transition: margin-left 5s linear
+				}
+
+		#block-40 .pano {
+			display: block;
+			width: 100%
+		}
+
+		#block-40 .frame.outset:hover .pano-wrapper.old {
+			margin-left: -100%
+		}
+
+			#block-40 .frame.outset:hover .pano-wrapper.old .pano {
+				margin-left: 100%
+			}
+	</style>
+	<header>
+		<h2>Блок № 40</h2>
+	</header>
+	<figure class="wrapper">
+		<div class="frame outset">
+			<figure class="frame inset">
+				<div class="pano-wrapper new"><img class="pano" src="img/retro-01.jpg" /></div>
+				<div class="pano-wrapper old"><img class="pano" src="img/retro-02.jpg" /></div>
+			</figure>
+		</div>
+	</figure>
+</section>
+
+<section id="block-41">
+	<style>
+		#block-41 .wrapper {
+			min-width: 20rem;
+			padding: 2rem;
+			font-family: Impact, sans-serif;
+			font-size: 5rem;
+			text-align: center;
+			background-color: #e1f5fe;
+		}
+
+		#block-41 .lorem {
+			background-image: linear-gradient(30deg, cyan, magenta);
+			background-repeat: no-repeat;
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			cursor: pointer;
+			transition: filter 1s linear;
+		}
+
+			#block-41 .lorem:hover {
+				filter: hue-rotate(360deg)
+			}
+	</style>
+	<header>
+		<h2>Блок № 41</h2>
+	</header>
+	<p class="wrapper"><span class="lorem">Lorem Ipsum</span></p>
+</section>
+
+<section id="block-42">
+	<style>
+		#block-42 .wrapper {
+			min-width: 20rem;
+			padding: 2rem;
+			font-family: Impact, sans-serif;
+			font-size: 5rem;
+			text-align: center;
+			background-color: #2196f3;
+		}
+
+		#block-42 .lorem {
+			background-image: linear-gradient(to right, #e3f2fd calc(100% / 3), #0d47a1 calc(100% / 3), #0d47a1 calc(200% / 3), #e3f2fd calc(200% / 3));
+			background-size: 300% 100%;
+			background-position-x: 100%;
+			background-repeat: no-repeat;
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			cursor: pointer;
+			transition: background-position-x 1s linear;
+		}
+
+			#block-42 .lorem:hover {
+				background-position-x: 0
+			}
+	</style>
+	<header>
+		<h2>Блок № 42</h2>
+	</header>
+	<p class="wrapper"><span class="lorem">Lorem Ipsum</span></p>
+</section>
+
+<section id="block-43">
+	<style>
+		#block-43 .wrapper {
+			min-width: 32rem;
+			padding: 0 2rem;
+			height: 12rem;
+			line-height: 12rem;
+			font-family: Impact, sans-serif;
+			font-size: 5rem;
+			text-align: center;
+			background-image: linear-gradient(#ffebee 40%, #d32f2f 0 60%, #ffebee 0);
+			cursor: pointer;
+		}
+
+		#block-43 .wrapper,
+		#block-43 .lorem {
+			background-repeat: no-repeat;
+			background-size: 100% calc(30 / 12 * 100%);
+			transition: background-position-y 1s linear;
+		}
+
+		#block-43 .lorem {
+			display: block;
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			background-image: linear-gradient(#d32f2f 40%, #fff 0 60%, #d32f2f 0);
+		}
+
+		#block-43 .wrapper:hover,
+		#block-43 .wrapper:hover .lorem {
+			background-position-y: 100%;
+		}
+	</style>
+	<header>
+		<h2>Блок № 43</h2>
+	</header>
+	<p class="wrapper"><span class="lorem">Lorem Ipsum</span></p>
+</section>
+
+<section id="block-44">
+	<style>
+		#block-44 .wrapper {
+			min-width: 30rem;
+			padding: 5rem 2rem;
+			font-family: 'PT Sans', sans-serif;
+			font-size: 4rem;
+			line-height: 6rem;
+			text-align: center;
+			text-transform: uppercase;
+			background-color: #fafafa;
+			color: #000;
+			cursor: pointer;
+		}
+
+		#block-44 .lorem {
+			display: block;
+			filter: opacity(0) blur(5rem);
+			transition: filter 0.5s linear;
+		}
+
+		#block-44 .wrapper:hover .lorem {
+			filter: opacity(1) blur(0)
+		}
+	</style>
+	<header>
+		<h2>Блок № 44</h2>
+	</header>
+	<p class="wrapper"><span class="lorem">Lorem Ipsum</span></p>
+</section>
+
+<section id="block-45">
+	<style>
+		#block-45 .wrapper {
+			min-width: 50rem;
+			overflow: hidden;
+			background-color: #333;
+			cursor: pointer;
+		}
+
+			#block-45 .lorem,
+			#block-45 .wrapper:after {
+				display: block;
+				float: left;
+				width: 100%;
+				height: 26rem;
+				transition: 4s linear;
+			}
+
+			#block-45 .wrapper:after {
+				content: '';
+				margin-top: -26rem;
+				background-image: radial-gradient(circle, transparent, black 50%);
+				background-repeat: no-repeat;
+				background-size: 300% 100%;
+				background-position: 100% center;
+				transition-property: background-position-x;
+			}
+
+		#block-45 .lorem {
+			font-family: 'PT Sans', sans-serif;
+			font-size: 6rem;
+			line-height: 26rem;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			text-shadow: 0.01em 0.01em 0.01em rgba(255,255,255,0.3), 0.3em 0.2em 0.1em #000;
+			color: #666;
+			transition-property: text-shadow;
+		}
+
+		#block-45 .wrapper:hover:after {
+			background-position-x: 0
+		}
+
+		#block-45 .wrapper:hover .lorem {
+			text-shadow: 0.01em 0.01em 0.01em rgba(255,255,255,0.3), -0.3em 0.2em 0.1em #000
+		}
+	</style>
+	<header>
+		<h2>Блок № 45</h2>
+	</header>
+	<div class="wrapper"><span class="lorem">Lorem Ipsum</span></div>
+</section>
+
+<section id="block-46">
+	<style>
+		#block-46 .wrapper {
+			padding: 5rem;
+			background-color: #fafafa;
+		}
+
+		#block-46 .counter,
+		#block-46 .counter > li {
+			overflow: hidden;
+			width: 5rem;
+			height: 5rem;
+		}
+
+		#block-46 .counter {
+			margin: auto;
+			list-style: none inside;
+			border-radius: 50%;
+			box-shadow: inset -0.75rem -1rem 2.2rem -1rem rgb(0,0,0,0.5), 0 2rem 2rem -1.5rem black;
+			cursor: pointer;
+		}
+
+			#block-46 .counter > li {
+				font-family: 'PT Sans', sans-serif;
+				font-size: 3rem;
+				line-height: 5rem;
+				font-weight: bold;
+				text-align: center;
+				color: #424242;
+				text-shadow: 0.05rem 0.05rem 0.1rem #fff, -0.04rem -0.04rem 0.05rem rgb(0,0,0,0.5);
+			}
+
+			#block-46 .counter:hover > li:first-child {
+				margin-top: -45rem;
+				transition: margin-top 9s steps(9, start)
+			}
+	</style>
+	<header>
+		<h2>Блок № 46</h2>
+	</header>
+	<div class="wrapper">
+		<ol class="counter">
+			<li>9</li>
+			<li>8</li>
+			<li>7</li>
+			<li>6</li>
+			<li>5</li>
+			<li>4</li>
+			<li>3</li>
+			<li>2</li>
+			<li>1</li>
+			<li>0</li>
+		</ol>
+	</div>
+</section>
+
+<section id="block-47">
+	<style>
+		#block-47 .gallery {
+			display: table;
+			width: 100%;
+			min-width: 30rem;
+			padding: 3rem;
+			background-color: #fafafa;
+		}
+
+		#block-47 .list {
+			display: table-row;
+			list-style: none inside;
+			box-shadow: 0 1rem 2rem -1rem #000;
+		}
+
+		#block-47 .panel {
+			display: table-cell;
+			width: 20%;
+			vertical-align: middle;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			cursor: pointer;
+			transition: width 300ms linear;
+		}
+
+			#block-47 .panel:not(.hover) {
+				width: 15%
+			}
+
+			#block-47 .panel:hover {
+				width: 40%
+			}
+
+		#block-47 .gallery:hover .panel:hover .panel-content {
+			opacity: 1
+		}
+
+		#block-47 .gallery:hover .panel:hover .panel-title,
+		#block-47 .gallery:hover .panel:hover .panel-link {
+			padding-top: 0;
+			opacity: 1
+		}
+
+			#block-47 .gallery:hover .panel:hover .panel-title:after {
+				width: 20%
+			}
+
+		#block-47 .panel-content {
+			padding: 12rem 0;
+			font-family: 'PT Sans', sans-serif;
+			text-align: center;
+			text-transform: uppercase;
+			background-image: linear-gradient(45deg, rgba(40,53,147,0.2), rgba(40,53,147,0.75));
+			color: #fff;
+			opacity: 0;
+			transition: opacity 500ms linear;
+		}
+
+		#block-47 .panel-title {
+			overflow: hidden;
+			height: 2rem;
+			padding-top: 2rem;
+			font-size: 0.85rem;
+			font-weight: bold;
+			line-height: 2rem;
+			opacity: 0;
+			transition: all 300ms linear 200ms;
+		}
+
+			#block-47 .panel-title:after {
+				content: '';
+				display: block;
+				height: 0.1rem;
+				width: 1%;
+				margin: -0.1rem auto 0 auto;
+				background-color: #fff;
+				transition: width 100ms linear 500ms;
+			}
+
+		#block-47 .panel-link {
+			display: block;
+			overflow: hidden;
+			height: 3rem;
+			padding-top: 3rem;
+			font-size: 0.6rem;
+			line-height: 3rem;
+			transition: all 300ms linear 500ms;
+		}
+	</style>
+	<header>
+		<h2>Блок № 47</h2>
+	</header>
+	<figure class="gallery">
+		<ul class="list">
+			<li class="panel" style="background-image: url(img/mountain.jpg)">
+				<div class="panel-content">
+					<h4 class="panel-title">Mountain</h4>
+					<span class="panel-link">Learn More</span>
+				</div>
+			</li>
+			<li class="panel" style="background-image: url(img/valley.jpg)">
+				<div class="panel-content">
+					<h4 class="panel-title">Valley</h4>
+					<span class="panel-link">Learn More</span>
+				</div>
+			</li>
+			<li class="panel" style="background-image: url(img/ocean.jpg)">
+				<div class="panel-content">
+					<h4 class="panel-title">Ocean</h4>
+					<span class="panel-link">Learn More</span>
+				</div>
+			</li>
+			<li class="panel" style="background-image: url(img/forest.jpg)">
+				<div class="panel-content">
+					<h4 class="panel-title">Forest</h4>
+					<span class="panel-link">Learn More</span>
+				</div>
+			</li>
+			<li class="panel" style="background-image: url(img/desert.jpg)">
+				<div class="panel-content">
+					<h4 class="panel-title">Desert</h4>
+					<span class="panel-link">Learn More</span>
+				</div>
+			</li>
+		</ul>
+	</figure>
+</section>
+
+<section id="block-48">
+	<style>
+		#block-48 .track {
+			overflow: hidden;
+			padding-top: 5%;
+			border-bottom: 1px solid #000;
+			background-color: #fff;
+		}
+
+			#block-48 .track:hover .cat {
+				margin-left: 100%;
+				transition: margin-left 60s linear;
+			}
+
+		#block-48 .cat {
+			display: block;
+			width: 10%;
+			margin-left: -10%;
+			margin-bottom: -1px;
+		}
+	</style>
+	<header>
+		<h2>Блок № 48</h2>
+	</header>
+	<figure class="track"><img class="cat" src="img/cat.gif" /></figure>
+</section>
+
+</main>
+</body>
+</html>
